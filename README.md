@@ -41,7 +41,7 @@ The program will allow dollar signs and decimal places to be missing from amount
 
 ### Benchmarking
 After switching out BigDecimals for integers, there was a pretty large gain in speed. 
-I benchmarked the difference between using strings of the actual item names in the menu_hash vs. replacing them with integers and then converting back to item names to present the solutions. The results of different target prices for long_example.txt:
+Here in the following table, I also benchmarked the difference between using strings of the actual item names in the menu_hash vs. replacing them with integers and then converting back to item names to present the solutions. The following shows that using integers as hash keys only gives a small performance win in heavy workloads, and for lighter workloads it’s actually slower because of the overhead of mapping back to strings. The results of different target prices for long_example.txt:
 
 At target price of $40:
 
